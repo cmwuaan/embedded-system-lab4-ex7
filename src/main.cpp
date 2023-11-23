@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#define soundPin A0
+#define soundPin 4
 
 byte ledPins[] = {2, 3};
 byte pinCount;
@@ -21,12 +21,8 @@ void setup()
 void loop()
 {
 
-  // int soundValue = analogRead(sensorAnalPin);
-  // Serial.println(soundValue);
-
   int soundStatus = digitalRead(soundPin);
-
-  if (soundPin)
+  if (soundStatus)
   {
     if (clapCount == 0)
     {
